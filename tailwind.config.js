@@ -16,6 +16,11 @@ module.exports = {
     colors: {
       blacky: "#0B0B0B",
     },
+    fontFamily: {
+      "neue-regular": ["Neue-Regular"],
+      "neue-bold": ["Neue-Bold"],
+      "font-spring": ["FontSpring"],
+    },
   },
   plugins: [],
 };

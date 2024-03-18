@@ -24,8 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    @apply bg-blacky;
-    color: white;
+  @apply bg-blacky;
+  color: white;
 }
 
 @layer utilities {
@@ -33,3 +33,31 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: "Neue-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/NeueMontreal-Regular.otf') format("opentype");
+  }
+
+  @font-face {
+    font-family: "Neue-Bold";
+    /* font-style: normal;
+    font-weight: 400;
+    font-display: swap; */
+    src: url('/fonts/NeueMontreal-Bold.otf') format("opentype");
+  }
+
+  @font-face {
+    font-family: "FontSpring";
+    /* font-weight: 700;
+    font-display: swap; */
+    src: url('/fonts/Fontspring-DEMO-rocgroteskwide-medium.otf') format("opentype");
+  }
+}
+
+
+
