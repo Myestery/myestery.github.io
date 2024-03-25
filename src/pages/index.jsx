@@ -6,16 +6,16 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className=''>
+    <div className='bg-blacky'>
       <div className='grid grid-cols-2 ml-[5%] mb-8'>
         <div className=' grid grid-rows-8 h-[723px]'>
           <div className=' row-span-2'></div>
           <div className='row-span-5'>
-            <div className='text-[44px] font-font-spring'>I’m Chiwetelu</div>
-            <div className='text-[#FCE85B] font-neue-bold text-[108px] font-bold'>
+            <h1 className='text-[44px] font-font-spring'>I’m Chiwetelu</h1>
+            <h1 className='text-[#FCE85B] font-neue-bold text-[108px] font-bold'>
               JOHNPAUL
-            </div>
-            <div className=' w-[80%] font-thin font-font-spring leading-[46px] text-[32px]'>
+            </h1>
+            <h2 className=' w-[80%] font-thin font-font-spring leading-[46px] text-[32px]'>
               I like{" "}
               <span className=' text-[#5DBE8C] font-neue-bold'>
                 BUILDING BIG SYSTEMS
@@ -29,7 +29,7 @@ export default function Home() {
                 TALK AND WRITE
               </span>{" "}
               about those things.
-            </div>
+            </h2>
           </div>
           <div className='row-span-1 flex items-center gap-6'>
             <Link
@@ -71,17 +71,165 @@ export default function Home() {
 
         <div className='border'></div>
       </div>
-
-      <div className='bg-[#5DBD8C] h-[180px] grid grid-cols-5'>
-        <div className='col-span-1'></div>
-        <div className='col-span-3 flex justify-between items-center'>
-          <div className="h-[60%]">
-            <div className="">7+</div>
+      <div className='h-auto'>
+        <div className='bg-[#5DBD8C] h-auto grid grid-cols-5'>
+          <div className='col-span-1'></div>
+          <div className='col-span-3 flex justify-between items-center'>
+            <div className='grid grid-rows-6'>
+              <div className='row-span-1'></div>
+              <div className='row-span-4'>
+                <div className='text-5xl font-bold text-blacky font-neue-bold pl-8'>
+                  5+
+                </div>
+                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                  years of
+                </div>
+                <div className='text-2xl font-neue-regular text-blacky tracking-wide'>
+                  experience
+                </div>
+              </div>
+            </div>
+            <div className='grid grid-rows-6'>
+              <div className='row-span-1'></div>
+              <div className='row-span-4'>
+                <div className='text-5xl font-bold text-blacky font-neue-bold pl-8'>
+                  20+
+                </div>
+                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                  completed
+                </div>
+                <div className='text-2xl font-neue-regular text-blacky tracking-wide pl-9'>
+                  projects
+                </div>
+              </div>
+            </div>
+            <div className='grid grid-rows-6'>
+              <div className='row-span-1'></div>
+              <div className='row-span-4'>
+                <div className='text-5xl font-bold text-blacky font-neue-bold pl-6'>
+                  10+
+                </div>
+                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                  happy
+                </div>
+                <div className='text-2xl font-neue-regular text-blacky tracking-wide'>
+                  customers
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="h-[60%]">3</div>
-          <div className="h-[60%]">3</div>
+          <div className='col-span-1'></div>
         </div>
-        <div className='col-span-1'></div>
+      </div>
+
+      <div className='py-12 mx-[5%]'>
+        <div className='flex justify-end'>
+          <Link href='/projects' className='flex py-2 -my-2'>
+            <Image
+              src='/arrow-down.svg'
+              width={50}
+              height={50}
+              alt='Picture of the icon'
+            />
+            <span className='rounded-3xl border border-white w-full py-2 px-4 text-lg font-font-spring font-thin'>
+              About Me
+            </span>
+          </Link>
+        </div>
+        <div className='flex items-center justify-center'>
+          <div className='w-[80%] self-center my-6'>
+            <h3 className='font-font-spring text-6xl text-center leading-[70px]'>
+              Every great <span className='text-[#5DBE8C]'>developer</span>{" "}
+              <br /> begin with an even better <br /> story
+            </h3>
+          </div>
+        </div>
+
+        <div className='flex items-center justify-center'>
+          <div className='w-[80%] self-center my-6'>
+            <h4 className='font-font-spring text-2xl text-center  text-[#A1A1A1]'>
+              Lorem ipsum dolor sit amet consectetur. Sit sapien venenatis
+              gravida tristique tortor iaculis. Ut arcu laoreet auctor at risus
+              at magnis et consectetur. Porta consectetur nisl sed egestas
+              tristique egestas lorem urna. Pretium mauris commodo at eget enim
+              tortor. Id sed cras sit dignissim vestibulum leo nam. Nulla nisl
+              id nisi laoreet nisi lobortis. Aliquam aliquam auctor sagittis in
+              quam. Integer lobortis ultrices egestas lacus ornare mauris cras
+              tempor posuere. Proin iaculis phasellus pellentesque dapibus vitae
+              id aliquet tortor.
+            </h4>
+          </div>
+        </div>
+
+        <div className='grid grid-cols-6 my-12'>
+          <div className='text-2xl text-center'>My Hobbies</div>
+          <div className='col-span-5'>
+            <div className='flex'>
+              <div className='ml-12 bg-[#5DBD8C] text-blacky rotate-12 inline-flex px-8 rounded-full border border-white  py-4 -my-2'>
+                <Image
+                  src='/reading.svg'
+                  width={35}
+                  height={35}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1'>Reading</span>
+              </div>
+
+              <div className='ml-28  inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+                <Image
+                  src='/gaming.svg'
+                  width={35}
+                  height={35}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1'>Gaming</span>
+              </div>
+
+              <div className='rotate-[18deg] inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+                <Image
+                  src='/movies.svg'
+                  width={30}
+                  height={30}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1 mx-2'>Movies</span>
+              </div>
+            </div>
+            <div className='flex mt-7'>
+              <div className=' text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+                <Image
+                  src='/music.svg'
+                  width={35}
+                  height={35}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1 mx-2'>Music</span>
+              </div>
+
+              <div className='ml-10 rotate-[-7deg] text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+                <Image
+                  src='/coding.svg'
+                  width={35}
+                  height={35}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1 mx-2'>Coding</span>
+              </div>
+
+              <div className='ml-8 text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+                <Image
+                  src='/singing.svg'
+                  width={30}
+                  height={30}
+                  alt='Picture of the icon'
+                />
+                <span className='py-1 mx-2'>Singing</span>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
       </div>
     </div>
   );
