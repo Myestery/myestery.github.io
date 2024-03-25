@@ -20,6 +20,7 @@ module.exports = {
       "neue-regular": ["Neue-Regular"],
       "neue-bold": ["Neue-Bold"],
       "font-spring": ["FontSpring"],
+      "neue-light": ["Neue-Light"],
     },
   },
   plugins: [],

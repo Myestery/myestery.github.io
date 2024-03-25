@@ -24,7 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  @apply bg-blacky;
+  @apply bg-blacky font-font-spring;
   color: white;
 }
 
@@ -49,6 +49,14 @@ body {
     font-weight: 400;
     font-display: swap; */
     src: url('/fonts/NeueMontreal-Bold.otf') format("opentype");
+  }
+
+  @font-face {
+    font-family: "Neue-Light";
+    /* font-style: normal;
+    font-weight: 400;
+    font-display: swap; */
+    src: url('/fonts/NeueMontreal-Light.otf') format("opentype");
   }
 
   @font-face {
