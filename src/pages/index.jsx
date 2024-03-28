@@ -1,10 +1,27 @@
+import Skills from "@/components/skills";
 import Image from "next/image";
 // import { Inter } from "next/font/google";
 import Link from "next/link";
+import { useState } from "react";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const experience = [
+    {
+      startDuration: "2022",
+      endDuration: "Present",
+      title: "Software Engineer",
+      workplace: "Oystr Finance",
+    },
+    {
+      startDuration: "2018",
+      endDuration: "2023",
+      title: "Bachelor Degree of Computer Science",
+      workplace: "University of Nigeria, Nsukka.",
+    },
+  ];
+  // const [experience, setExperience] = useState()
   return (
     <div className='bg-blacky'>
       <div className='grid grid-cols-2 ml-[5%] mb-8'>
@@ -144,7 +161,6 @@ export default function Home() {
             </h3>
           </div>
         </div>
-
         <div className='flex items-center justify-center'>
           <div className='w-[80%] self-center my-6'>
             <h4 className='font-font-spring text-2xl text-center  text-[#A1A1A1]'>
@@ -160,7 +176,6 @@ export default function Home() {
             </h4>
           </div>
         </div>
-
         <div className='grid grid-cols-6 my-12'>
           <div className='text-2xl text-center'>My Hobbies</div>
           <div className='col-span-5'>
@@ -230,7 +245,54 @@ export default function Home() {
 
           <div></div>
         </div>
+        <div>
+          <div className='flex gap-1 mb-12'>
+            <Image
+              src='/arrow-down.svg'
+              width={35}
+              height={35}
+              alt='Picture of the icon'
+            />
+            <Link
+              href='/projects'
+              className='flex gap-2 rounded-3xl border border-white  py-1'>
+              <span className='w-full px-2'>Education</span>
+            </Link>
+            <div></div>
+          </div>
+
+          <div className='flex justify-between'>
+            <div className=' text-6xl w-1/4 font-font-spring font-thin'>
+              Education and Experience
+            </div>
+
+            <div className='text-xl font-font-spring w-1/4 mr-8 font-thin'>
+              Building the worlds best web based applications.
+            </div>
+          </div>
+
+          <div className='my-4 border-l-2 border-[#666666] ml-4'>
+            {experience.map((exp) => (
+              <div key={exp.title}>
+                <div className='flex my-8'>
+                  <div className='rounded-full bg-[#D9D9D9] p-4 inline-block relative -left-4'></div>
+
+                  <div className='flex text-[#D9D9D9] text-lg ml-8'>
+                    {exp.startDuration}{" "}
+                    <span className='font-neue-bold -mt-1 mx-3'> - </span>{" "}
+                    {exp.endDuration}
+                  </div>
+                </div>
+                <div className='text-xl ml-16'>{exp.title}</div>
+
+                <div className='ml-16 text-lg'>{exp.workplace}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <Skills/>
     </div>
   );
 }
