@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 export function Skills() {
-  let swiper;
+
   useEffect(() => {
-    swiper = new window.Swiper(".swiper", {
+    let swiper = new window.Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
       autoplay: {
@@ -38,38 +38,40 @@ export function Skills() {
       title: "React",
       subText:
         "From creating static web apps just like this website to full stack applications with Laravel and Inertia. I have worked with react very well",
-      icon: "/react.svg",
+      icon: "/img/react.svg",
     },
     {
       title: "Laravel",
       subText:
         "From creating static web apps just like this website to full stack applications with Laravel and Inertia. I have worked with react very well",
-      icon: "/react.svg",
+      icon: "/img/react.svg",
     },
     {
       title: "Solidity",
       subText:
         "From creating static web apps just like this website to full stack applications with Laravel and Inertia. I have worked with react very well",
-      icon: "/react.svg",
+      icon: "/img/react.svg",
     },
     {
       title: "Vue",
       subText:
         "From creating static web apps just like this website to full stack applications with Laravel and Inertia. I have worked with react very well",
-      icon: "/react.svg",
+      icon: "/img/react.svg",
     },
     {
       title: "Nestjs",
       subText:
         "From creating static web apps just like this website to full stack applications with Laravel and Inertia. I have worked with react very well",
-      icon: "/react.svg",
+      icon: "/img/react.svg",
     },
   ];
 
   const nextSlide = () => {
+    const swiper = document.querySelector(".swiper").swiper;
     swiper.slideNext();
   };
   const prevSlide = () => {
+    const swiper = document.querySelector(".swiper").swiper;
     swiper.slidePrev();
   };
 
@@ -77,7 +79,7 @@ export function Skills() {
     <div className='bg-[#5DBD8C] my-12 rounded-[50px] py-10 pl-10 text-blacky mx-8'>
       <div className='flex gap-1 mb-12'>
         <Image
-          src='/arrow-down-black.svg'
+          src='/img/arrow-down-black.svg'
           width={35}
           height={35}
           alt='Picture of the icon'
@@ -102,14 +104,14 @@ export function Skills() {
 
           <div className='flex gap-2 my-4 justify-end'>
             <Image
-              src='/arrow-left-rounded-black.svg'
+              src='/img/arrow-left-rounded-black.svg'
               width={40}
               height={40}
               alt='Picture of the icon'
               onClick={prevSlide}
             />
             <Image
-              src='/arrow-right-rounded-black.svg'
+              src='/img/arrow-right-rounded-black.svg'
               width={40}
               height={40}
               alt='Picture of the icon'
@@ -119,12 +121,12 @@ export function Skills() {
         </div>
       </div>
 
-      <div className='my-6 swiper'>
-        <div class='swiper-wrapper '>
+      <div className='my-6 swiper pr-2'>
+        <div className='swiper-wrapper '>
           {skills.map((x) => (
             <div
               key={x.title}
-              class='swiper-slide bg-[#141414] p-6 rounded-3xl'>
+              className='swiper-slide bg-[#141414] p-6 rounded-3xl'>
               <Image
                 src={x.icon}
                 width={40}
@@ -144,3 +146,4 @@ export function Skills() {
   );
 }
 export default Skills;
+

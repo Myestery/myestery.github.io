@@ -8,7 +8,7 @@ function Navbar() {
         <div className=' col-span-2'>
           <Link href='/'>
           <Image
-            src='/logo.svg'
+            src='/img/logo.svg'
             width={177}
             height={35}
             alt='Picture of the author'
@@ -22,7 +22,7 @@ function Navbar() {
           <Link href='/Blog'>Blog</Link>
           <Link href='/projects' className='flex gap-2 rounded-3xl border border-white  py-2 -my-2'>
             <Image
-              src='/right-rounded.svg'
+              src='/img/right-rounded.svg'
               width={35}
               height={35}
               alt='Picture of the icon'

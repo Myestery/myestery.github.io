@@ -1,3 +1,4 @@
+import Dropdown from "@/components/dropdown";
 import Skills from "@/components/skills";
 import Image from "next/image";
 // import { Inter } from "next/font/google";
@@ -21,7 +22,26 @@ export default function Home() {
       workplace: "University of Nigeria, Nsukka.",
     },
   ];
-  // const [experience, setExperience] = useState()
+  const sortOptions = [
+    { name: "Date Modified", value: "date" },
+    { name: "Name", value: "name" },
+    { name: "Size", value: "size" },
+  ];
+  const projects = [
+    {
+      name: "Frendly Lender",
+      summary:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci neque corrupti suscipit, nemo voluptas perferendis obcaecati quasi unde rem quisquam praesentium fugiat placeat iste quidem perspiciatis. Nesciunt, modi eligendi! Voluptas.",
+      skills: ["React", "Mongo DB"],
+      project_link: "https://app.frendlylender.com",
+      github_link: "https://github.com/myestery",
+      image: ""
+    },
+    { name: "Name", value: "name" },
+    { name: "Size", value: "size" },
+  ];
+  const [sortBy, setSortBy] = useState({});
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <div className='bg-blacky'>
       <div className='grid grid-cols-2 ml-[5%] mb-8'>
@@ -53,7 +73,7 @@ export default function Home() {
               href='/projects'
               className='flex rounded-full border border-white mx -my-2 h-[60%]'>
               <Image
-                src='/new-tab.svg'
+                src='/img/new-tab.svg'
                 width={47}
                 height={47}
                 style={{ maxHeight: "47px" }}
@@ -70,7 +90,7 @@ export default function Home() {
               href='/projects'
               className='flex rounded-full border border-white mx -my-2 h-[60%]'>
               <Image
-                src='/new-tab-circular.svg'
+                src='/img/new-tab-circular.svg'
                 width={20}
                 height={20}
                 // style={{ maxHeight: "47px" }}
@@ -143,7 +163,7 @@ export default function Home() {
         <div className='flex justify-end'>
           <Link href='/projects' className='flex py-2 -my-2'>
             <Image
-              src='/arrow-down.svg'
+              src='/img/arrow-down.svg'
               width={50}
               height={50}
               alt='Picture of the icon'
@@ -182,7 +202,7 @@ export default function Home() {
             <div className='flex'>
               <div className='ml-12 bg-[#5DBD8C] text-blacky rotate-12 inline-flex px-8 rounded-full border border-white  py-4 -my-2'>
                 <Image
-                  src='/reading.svg'
+                  src='/img/reading.svg'
                   width={35}
                   height={35}
                   alt='Picture of the icon'
@@ -192,7 +212,7 @@ export default function Home() {
 
               <div className='ml-28  inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
                 <Image
-                  src='/gaming.svg'
+                  src='/img/gaming.svg'
                   width={35}
                   height={35}
                   alt='Picture of the icon'
@@ -202,7 +222,7 @@ export default function Home() {
 
               <div className='rotate-[18deg] inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
                 <Image
-                  src='/movies.svg'
+                  src='/img/movies.svg'
                   width={30}
                   height={30}
                   alt='Picture of the icon'
@@ -213,7 +233,7 @@ export default function Home() {
             <div className='flex mt-7'>
               <div className=' text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
                 <Image
-                  src='/music.svg'
+                  src='/img/music.svg'
                   width={35}
                   height={35}
                   alt='Picture of the icon'
@@ -223,7 +243,7 @@ export default function Home() {
 
               <div className='ml-10 rotate-[-7deg] text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
                 <Image
-                  src='/coding.svg'
+                  src='/img/coding.svg'
                   width={35}
                   height={35}
                   alt='Picture of the icon'
@@ -233,7 +253,7 @@ export default function Home() {
 
               <div className='ml-8 text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
                 <Image
-                  src='/singing.svg'
+                  src='/img/singing.svg'
                   width={30}
                   height={30}
                   alt='Picture of the icon'
@@ -248,7 +268,7 @@ export default function Home() {
         <div>
           <div className='flex gap-1 mb-12'>
             <Image
-              src='/arrow-down.svg'
+              src='/img/arrow-down.svg'
               width={35}
               height={35}
               alt='Picture of the icon'
@@ -292,7 +312,43 @@ export default function Home() {
         </div>
       </div>
 
-      <Skills/>
+      <Skills />
+
+      <div className='my-4 flex justify-center'>
+        <div className='flex gap-1 mb-12'>
+          <Image
+            src='/img/arrow-down.svg'
+            width={35}
+            height={35}
+            alt='Picture of the icon'
+          />
+          <Link
+            href='/projects'
+            className='flex gap-2 rounded-3xl border border-white  py-1'>
+            <span className='w-full px-4'>Work Process</span>
+          </Link>
+          <div></div>
+        </div>
+      </div>
+
+      <div className='flex justify-center my-4'>
+        <h4 className='w-2/5 text-5xl text-center leading-[70px]'>
+          Take a look at my latest projects.
+        </h4>
+      </div>
+
+      <div className='mx-[5%]'>
+        <span className='text-[#A1A1A1] font-thin mx-1'>Sort By:</span>
+        {/* {sortBy.name}{" "} */}
+        <Dropdown
+          open={isDropDownOpen}
+          toggle={setIsDropDownOpen}
+          options={sortOptions}
+          setFunction={setSortBy}
+          className=''></Dropdown>
+      </div>
+
+      <div className='mx-[5%] grid grid-cols-1 md:grid-cols-2'>div</div>
     </div>
   );
 }
