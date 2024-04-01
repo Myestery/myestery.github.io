@@ -65,6 +65,18 @@ body {
     font-display: swap; */
     src: url('/fonts/Fontspring-DEMO-rocgroteskwide-medium.otf') format("opentype");
   }
+
+  @font-face {
+    font-family: "FontSpring-Light";
+    /* font-weight: 700;
+    font-display: swap; */
+    src: url('/fonts/fontspring-demo-light.otf') format("opentype");
+  }
+
+  input:-webkit-autofill {
+    border-color: green; /* Change border color */
+    background-color: yellow; /* Change background color */
+  }
 }
 
 

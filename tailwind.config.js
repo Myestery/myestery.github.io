@@ -15,11 +15,13 @@ module.exports = {
     },
     colors: {
       blacky: "#0B0B0B",
+      white: "#FFFFFF",
     },
     fontFamily: {
       "neue-regular": ["Neue-Regular"],
       "neue-bold": ["Neue-Bold"],
       "font-spring": ["FontSpring"],
+      "font-spring-light": ["FontSpring-Light"],
       "neue-light": ["Neue-Light"],
     },
   },

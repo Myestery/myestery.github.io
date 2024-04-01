@@ -35,10 +35,35 @@ export default function Home() {
       skills: ["React", "Mongo DB"],
       project_link: "https://app.frendlylender.com",
       github_link: "https://github.com/myestery",
-      image: ""
+      image: "/img/project.png",
     },
-    { name: "Name", value: "name" },
-    { name: "Size", value: "size" },
+    {
+      name: "Frendly Lender",
+      summary:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci neque corrupti suscipit, nemo voluptas perferendis obcaecati quasi unde rem quisquam praesentium fugiat placeat iste quidem perspiciatis. Nesciunt, modi eligendi! Voluptas.",
+      skills: ["React", "Mongo DB"],
+      project_link: "https://app.frendlylender.com",
+      github_link: "https://github.com/myestery",
+      image: "/img/project.png",
+    },
+    {
+      name: "Frendly Lender",
+      summary:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci neque corrupti suscipit, nemo voluptas perferendis obcaecati quasi unde rem quisquam praesentium fugiat placeat iste quidem perspiciatis. Nesciunt, modi eligendi! Voluptas.",
+      skills: ["React", "Mongo DB"],
+      project_link: "https://app.frendlylender.com",
+      github_link: "https://github.com/myestery",
+      image: "/img/project.png",
+    },
+    {
+      name: "Frendly Lender",
+      summary:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci neque corrupti suscipit, nemo voluptas perferendis obcaecati quasi unde rem quisquam praesentium fugiat placeat iste quidem perspiciatis. Nesciunt, modi eligendi! Voluptas.",
+      skills: ["React", "Mongo DB"],
+      project_link: "https://app.frendlylender.com",
+      github_link: "https://github.com/myestery",
+      image: "/img/project.png",
+    },
   ];
   const [sortBy, setSortBy] = useState({});
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -337,18 +362,155 @@ export default function Home() {
         </h4>
       </div>
 
-      <div className='mx-[5%]'>
-        <span className='text-[#A1A1A1] font-thin mx-1'>Sort By:</span>
-        {/* {sortBy.name}{" "} */}
-        <Dropdown
-          open={isDropDownOpen}
-          toggle={setIsDropDownOpen}
-          options={sortOptions}
-          setFunction={setSortBy}
-          className=''></Dropdown>
+      <div className='flex justify-between mx-[5%] my-8'>
+        <div className=''>
+          <span className='text-[#A1A1A1] font-thin mx-1'>Sort By:</span>
+          {/* {sortBy.name}{" "} */}
+          <Dropdown
+            open={isDropDownOpen}
+            toggle={setIsDropDownOpen}
+            options={sortOptions}
+            setFunction={setSortBy}
+            className=''></Dropdown>
+        </div>
+
+        <div className=''>
+          <div className='ml-10 text-white inline-flex px-8 rounded-full border-2 border-white py-2 -my-2'>
+            <Image
+              src='/img/filter.svg'
+              width={35}
+              height={35}
+              alt='Picture of the icon'
+            />
+            <span className='py-1 mx-2'>Filter</span>
+            <Dropdown
+              open={isDropDownOpen}
+              toggle={setIsDropDownOpen}
+              options={sortOptions}
+              setFunction={setSortBy}
+              className=''></Dropdown>
+          </div>
+        </div>
       </div>
 
-      <div className='mx-[5%] grid grid-cols-1 md:grid-cols-2'>div</div>
+      <div className='mx-[5%] grid grid-cols-1 md:grid-cols-2 text-blacky gap-4 my-6'>
+        {projects.map((project) => (
+          <div
+            key={project.name}
+            className='rounded-3xl p-8 border border-[#ffffff] relative font-font-spring-light'
+            style={{
+              backgroundImage: `url(${project.image})`,
+              backgroundSize: "cover",
+              minHeight: "617px",
+              minWidth: "607px",
+            }}>
+            {/* blackish overlay cos I'm writing on it */}
+            <div className='bg-blacky bg-opacity-50  min-h-full min-w-full h-full w-full absolute top-0 left-0 rounded-3xl'></div>
+            <div className='relative flex justify-end gap-3 z-10 w-full top-0'>
+              {project.skills.map((skill) => (
+                <div className='rounded-full bg-[#C2BFBD] text-xs py-1 px-2'>
+                  {skill}
+                </div>
+              ))}
+            </div>
+            <div className='relative h-full text-white z-10 flex flex-col justify-end gap-8 mb-8'>
+              <h3 className='text-3xl font-font-spring'>{project.name}</h3>
+              <p className='text-lg'>{project.summary}</p>
+              <div className='flex gap-8 mb-8'>
+                <a href={project.project_link} className='text-lg inline-block'>
+                  <Image
+                    src='/img/arrow-up-right.svg'
+                    width={35}
+                    height={35}
+                    alt='Picture of the icon'
+                  />
+                </a>
+                <a href={project.github_link} className='text-lg inline-block'>
+                  <Image
+                    src='/img/github.svg'
+                    width={35}
+                    height={35}
+                    alt='Picture of the icon'
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className='flex justify-end mx-[5%] mb-16'>
+        <Link
+          href='/projects'
+          className='flex gap-2 rounded-3xl border border-white  py-2 -my-2'>
+          <Image
+            src='/img/right-rounded.svg'
+            width={35}
+            height={35}
+            alt='Picture of the icon'
+          />
+          <span className='w-full mx-2 py-1'>See More</span>
+        </Link>
+      </div>
+
+      <div className='flex justify-start mx-[5%] mb-20'>
+        <div className='flex gap-1 mb-12'>
+          <Image
+            src='/img/arrow-down.svg'
+            width={35}
+            height={35}
+            alt='Picture of the icon'
+          />
+          <Link
+            href='/projects'
+            className='flex gap-2 rounded-3xl border border-white  py-1'>
+            <span className='w-full px-4'>Contact Me</span>
+          </Link>
+          <div></div>
+        </div>
+      </div>
+
+      <div className='flex flex-col mx-[5%] my-12'>
+        <div className='flex justify-center'>
+          <h1 className='text-3xl font-font-spring'>Get in touch</h1>
+        </div>
+        <p className='my-4 text-center font-font-spring-light text-[#A1A1A1] mx-[15%] text-lg'>
+          Currently, i am on a lookout for some new opportunities and
+          collaborations. if you have a project in mind and you like what you
+          have seen so far or you just want to connect, feel free to drop a
+          message.
+        </p>
+      </div>
+
+      <div className='mx-[5%]'>
+        <div className='flex justify-center my-6'>
+          <input
+            name='name'
+            type='text'
+            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none autofill:border-[#282828] autofill:bg-[#141414]'
+            placeholder='Name'
+          />
+        </div>
+
+        <div className='flex justify-center my-6'>
+          <input
+            name='email'
+            type='email'
+            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none font-neue-bold'
+            placeholder='email'
+          />
+        </div>
+
+        <div className='flex justify-center my-6'>
+          <textarea
+            name='message'
+            type='text'
+            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none'
+            placeholder='Message'
+            rows={4}
+          />
+        </div>
+      </div>
     </div>
   );
 }
