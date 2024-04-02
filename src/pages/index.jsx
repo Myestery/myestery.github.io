@@ -1,4 +1,5 @@
 import Dropdown from "@/components/dropdown";
+import Footer from "@/components/footer";
 import Skills from "@/components/skills";
 import Image from "next/image";
 // import { Inter } from "next/font/google";
@@ -408,7 +409,9 @@ export default function Home() {
             <div className='bg-blacky bg-opacity-50  min-h-full min-w-full h-full w-full absolute top-0 left-0 rounded-3xl'></div>
             <div className='relative flex justify-end gap-3 z-10 w-full top-0'>
               {project.skills.map((skill) => (
-                <div className='rounded-full bg-[#C2BFBD] text-xs py-1 px-2'>
+                <div
+                  key={skill}
+                  className='rounded-full bg-[#C2BFBD] text-xs py-1 px-2'>
                   {skill}
                 </div>
               ))}
@@ -510,7 +513,17 @@ export default function Home() {
             rows={4}
           />
         </div>
+
+        <div className='flex justify-center my-6'>
+          <button className='inline-block bg-[#5DBD8C] rounded-3xl py-6 px-20 text-blacky'>
+            SUBMIT
+          </button>
+        </div>
+
+     
       </div>
+
+      <Footer />
     </div>
   );
 }
