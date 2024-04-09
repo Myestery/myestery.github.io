@@ -1,9 +1,9 @@
 import Dropdown from "@/components/dropdown";
 import Footer from "@/components/footer";
-import Skills from "@/components/skills";
 import Image from "next/image";
 // import { Inter } from "next/font/google";
 import Link from "next/link";
+import Skills from "@/components/skills";
 import { useState } from "react";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -71,14 +71,14 @@ export default function Home() {
   return (
     <div className='bg-blacky'>
       <div className='grid grid-cols-2 ml-[5%] mb-8'>
-        <div className=' grid grid-rows-8 h-[723px]'>
-          <div className=' row-span-2'></div>
+        <div className='col-span-2 md:col-span-1 grid grid-rows-8 md:h-[723px]'>
+          <div className='row-span-1 md:row-span-2'></div>
           <div className='row-span-5'>
-            <h1 className='text-[44px] font-font-spring'>I’m Chiwetelu</h1>
-            <h1 className='text-[#FCE85B] font-neue-bold text-[108px] font-bold'>
+            <h1 className='text-[20px] md:text-[44px] font-font-spring'>I’m Chiwetelu</h1>
+            <h1 className='text-[#FCE85B] font-neue-bold text-[65px] md:text-[108px] font-bold'>
               JOHNPAUL
             </h1>
-            <h2 className=' w-[80%] font-thin font-font-spring leading-[46px] text-[32px]'>
+            <h2 className='text-[18px] md:w-[80%] font-thin font-font-spring md:leading-[46px] md:text-[32px]'>
               I like{" "}
               <span className=' text-[#5DBE8C] font-neue-bold'>
                 BUILDING BIG SYSTEMS
@@ -94,7 +94,7 @@ export default function Home() {
               about those things.
             </h2>
           </div>
-          <div className='row-span-1 flex items-center gap-6'>
+          <div className='row-span-2 md:row-span-1 flex items-center gap-3  md:gap-6'>
             <Link
               href='/projects'
               className='flex rounded-full border border-white mx -my-2 h-[60%]'>
@@ -107,7 +107,7 @@ export default function Home() {
               />
               <span
                 href='/projects'
-                className='block self-center mx-6 font-font-spring'>
+                className='block self-center mx-2 md:mx-6 font-font-spring'>
                 Hire <span className='font-extrabold'>ME</span>
               </span>
             </Link>
@@ -125,7 +125,7 @@ export default function Home() {
               />
               <span
                 href='/projects'
-                className='block self-center mx-4 font-font-spring'>
+                className='block self-center mx-2 md:mx-4 font-font-spring'>
                 <span className='font-extrabold'>SEE</span> Resume
               </span>
             </Link>
@@ -136,18 +136,18 @@ export default function Home() {
       </div>
       <div className='h-auto'>
         <div className='bg-[#5DBD8C] h-auto grid grid-cols-5'>
-          <div className='col-span-1'></div>
-          <div className='col-span-3 flex justify-between items-center'>
+          <div className='hidden md:block col-span-1'></div>
+          <div className='col-span-5 md:col-span-3 flex justify-between items-center px-8 md:px-0'>
             <div className='grid grid-rows-6'>
               <div className='row-span-1'></div>
               <div className='row-span-4'>
-                <div className='text-5xl font-bold text-blacky font-neue-bold pl-8'>
+                <div className='text-2xl md:text-5xl font-bold text-blacky font-neue-bold pl-8'>
                   5+
                 </div>
-                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                <div className='text-normal md:text-2xl font-neue-thin md:pl-5 text-blacky tracking-wide font-thin '>
                   years of
                 </div>
-                <div className='text-2xl font-neue-regular text-blacky tracking-wide'>
+                <div className='text-lg md:text-2xl font-neue-regular text-blacky tracking-wide'>
                   experience
                 </div>
               </div>
@@ -155,13 +155,13 @@ export default function Home() {
             <div className='grid grid-rows-6'>
               <div className='row-span-1'></div>
               <div className='row-span-4'>
-                <div className='text-5xl font-bold text-blacky font-neue-bold pl-8'>
+                <div className='text-2xl md:text-5xl font-bold text-blacky font-neue-bold pl-8'>
                   20+
                 </div>
-                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                <div className='text-lg md:text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
                   completed
                 </div>
-                <div className='text-2xl font-neue-regular text-blacky tracking-wide pl-9'>
+                <div className='text-lg md:text-2xl font-neue-regular text-blacky tracking-wide pl-9'>
                   projects
                 </div>
               </div>
@@ -169,19 +169,19 @@ export default function Home() {
             <div className='grid grid-rows-6'>
               <div className='row-span-1'></div>
               <div className='row-span-4'>
-                <div className='text-5xl font-bold text-blacky font-neue-bold pl-6'>
+                <div className='text-2xl md:text-5xl font-bold text-blacky font-neue-bold pl-6'>
                   10+
                 </div>
-                <div className='text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
+                <div className='text-lg md:text-2xl font-neue-thin pl-5 text-blacky tracking-wide font-thin '>
                   happy
                 </div>
-                <div className='text-2xl font-neue-regular text-blacky tracking-wide'>
+                <div className='text-lg md:text-2xl font-neue-regular text-blacky tracking-wide'>
                   customers
                 </div>
               </div>
             </div>
           </div>
-          <div className='col-span-1'></div>
+          <div className='hidden md:block col-span-1'></div>
         </div>
       </div>
 
@@ -190,18 +190,18 @@ export default function Home() {
           <Link href='/projects' className='flex py-2 -my-2'>
             <Image
               src='/img/arrow-down.svg'
-              width={50}
-              height={50}
+              width={35}
+              height={35}
               alt='Picture of the icon'
             />
-            <span className='rounded-3xl border border-white w-full py-2 px-4 text-lg font-font-spring font-thin'>
+            <span className='rounded-3xl border border-white w-full py-2 px-2 md:px-4 text-sm md:text-lg font-font-spring font-thin'>
               About Me
             </span>
           </Link>
         </div>
         <div className='flex items-center justify-center'>
           <div className='w-[80%] self-center my-6'>
-            <h3 className='font-font-spring text-6xl text-center leading-[70px]'>
+            <h3 className='font-font-spring text-[24px] md:text-6xl text-center md:leading-[70px]'>
               Every great <span className='text-[#5DBE8C]'>developer</span>{" "}
               <br /> begin with an even better <br /> story
             </h3>
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
         <div className='flex items-center justify-center'>
           <div className='w-[80%] self-center my-6'>
-            <h4 className='font-font-spring text-2xl text-center  text-[#A1A1A1]'>
+            <h4 className='font-font-spring text-sm md:text-2xl md:text-center  text-[#A1A1A1]'>
               Lorem ipsum dolor sit amet consectetur. Sit sapien venenatis
               gravida tristique tortor iaculis. Ut arcu laoreet auctor at risus
               at magnis et consectetur. Porta consectetur nisl sed egestas
@@ -223,20 +223,20 @@ export default function Home() {
           </div>
         </div>
         <div className='grid grid-cols-6 my-12'>
-          <div className='text-2xl text-center'>My Hobbies</div>
+          <div className='text-[16px] md:text-2xl text-center'>My Hobbies</div>
           <div className='col-span-5'>
-            <div className='flex'>
-              <div className='ml-12 bg-[#5DBD8C] text-blacky rotate-12 inline-flex px-8 rounded-full border border-white  py-4 -my-2'>
+            <div className='flex flex-wrap md:flex-nowrap text-xs md:text-base'>
+              <div className='ml-12 bg-[#5DBD8C] text-blacky rotate-12 inline-flex px-4 md:px-8 rounded-full border border-white  py-2 md:py-4 -my-2'>
                 <Image
                   src='/img/reading.svg'
                   width={35}
                   height={35}
                   alt='Picture of the icon'
                 />
-                <span className='py-1'>Reading</span>
+                <span className='py-2 md:py-1'>Reading</span>
               </div>
 
-              <div className='ml-28  inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+              <div className='ml-28  inline-flex px-4 md:px-8 rounded-full border-2 border-white  py-2 md:py-4 -my-2'>
                 <Image
                   src='/img/gaming.svg'
                   width={35}
@@ -246,7 +246,7 @@ export default function Home() {
                 <span className='py-1'>Gaming</span>
               </div>
 
-              <div className='rotate-[18deg] inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+              <div className='rotate-[18deg] inline-flex px-4 md:px-8 rounded-full border-2 border-white  py-2 md:py-4 -my-2'>
                 <Image
                   src='/img/movies.svg'
                   width={30}
@@ -256,8 +256,8 @@ export default function Home() {
                 <span className='py-1 mx-2'>Movies</span>
               </div>
             </div>
-            <div className='flex mt-7'>
-              <div className=' text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+            <div className='flex gap-4 md:gap-0 mt-7 flex-wrap md:flex-nowrap text-xs md:text-base'>
+              <div className=' text-white inline-flex px-4 md:px-8 rounded-full border-2 border-white  py-2 md:py-4 -my-2'>
                 <Image
                   src='/img/music.svg'
                   width={35}
@@ -267,7 +267,7 @@ export default function Home() {
                 <span className='py-1 mx-2'>Music</span>
               </div>
 
-              <div className='ml-10 rotate-[-7deg] text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+              <div className='md:ml-10 rotate-[-7deg] text-white inline-flex px-4 md:px-8 rounded-full border-2 border-white  py-2 md:py-4 -my-2'>
                 <Image
                   src='/img/coding.svg'
                   width={35}
@@ -277,7 +277,7 @@ export default function Home() {
                 <span className='py-1 mx-2'>Coding</span>
               </div>
 
-              <div className='ml-8 text-white inline-flex px-8 rounded-full border-2 border-white  py-4 -my-2'>
+              <div className='ml-8 text-white inline-flex px-4 md:px-8 rounded-full border-2 border-white  py-2 md:py-4 md:-my-2'>
                 <Image
                   src='/img/singing.svg'
                   width={30}
@@ -308,30 +308,29 @@ export default function Home() {
           </div>
 
           <div className='flex justify-between'>
-            <div className=' text-6xl w-1/4 font-font-spring font-thin'>
+            <div className='text-2xl md:text-6xl w-1/4 font-font-spring font-thin'>
               Education and Experience
             </div>
 
-            <div className='text-xl font-font-spring w-1/4 mr-8 font-thin'>
+            <div className='hidden md:block text-xl font-font-spring w-1/4 mr-8 font-thin'>
               Building the worlds best web based applications.
             </div>
           </div>
 
-          <div className='my-4 border-l-2 border-[#666666] ml-4'>
+          <div className='my-6 border-l-2 border-[#666666] ml-4'>
             {experience.map((exp) => (
-              <div key={exp.title}>
-                <div className='flex my-8'>
+              <div key={exp.title} className="mt-8">
+                <div className='flex my-1 md:my-4'>
                   <div className='rounded-full bg-[#D9D9D9] p-4 inline-block relative -left-4'></div>
 
-                  <div className='flex text-[#D9D9D9] text-lg ml-8'>
+                  <div className='flex text-[#D9D9D9] text-sm md:text-lg ml-8'>
                     {exp.startDuration}{" "}
                     <span className='font-neue-bold -mt-1 mx-3'> - </span>{" "}
                     {exp.endDuration}
                   </div>
                 </div>
-                <div className='text-xl ml-16'>{exp.title}</div>
-
-                <div className='ml-16 text-lg'>{exp.workplace}</div>
+                <div className='text-base md:text-xl ml-16'>{exp.title}</div>
+                <div className='ml-16 text-sm md:text-lg mt-2'>{exp.workplace}</div>
               </div>
             ))}
           </div>
@@ -358,38 +357,40 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center my-4'>
-        <h4 className='w-2/5 text-5xl text-center leading-[70px]'>
+        <h4 className='md:w-2/5 text-xl md:text-5xl text-center md:leading-[70px]'>
           Take a look at my latest projects.
         </h4>
       </div>
 
-      <div className='flex justify-between mx-[5%] my-8'>
+      <div className='flex justify-between mx-4 md:mx-[5%] my-8'>
         <div className=''>
-          <span className='text-[#A1A1A1] font-thin mx-1'>Sort By:</span>
+          <span className='text-[#A1A1A1] text-xs md:text-base font-thin mx-1'>Sort By:</span>
           {/* {sortBy.name}{" "} */}
           <Dropdown
             open={isDropDownOpen}
             toggle={setIsDropDownOpen}
             options={sortOptions}
             setFunction={setSortBy}
-            className=''></Dropdown>
+            className='text-xs md:text-base'></Dropdown>
         </div>
 
-        <div className=''>
-          <div className='ml-10 text-white inline-flex px-8 rounded-full border-2 border-white py-2 -my-2'>
+        <div className='flex flex-wrap gap-0 md:gap-2 justify-end'>
+          <div className='text-xs md:text-base md:ml-10 text-white inline-flex px-2 md:px-8 rounded-full border md:border-2 border-white  md:py-2 md:-my-2'>
             <Image
               src='/img/filter.svg'
-              width={35}
-              height={35}
+              width={20}
+              height={20}
               alt='Picture of the icon'
             />
             <span className='py-1 mx-2'>Filter</span>
+            </div>
+            <div>
             <Dropdown
               open={isDropDownOpen}
               toggle={setIsDropDownOpen}
               options={sortOptions}
               setFunction={setSortBy}
-              className=''></Dropdown>
+              className='text-xs md:text-base'></Dropdown>
           </div>
         </div>
       </div>
@@ -398,12 +399,10 @@ export default function Home() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className='rounded-3xl p-8 border border-[#ffffff] relative font-font-spring-light'
+            className='rounded-3xl p-6 md:p-8 border border-[#ffffff] relative font-font-spring-light md:min-h-[617px] md:min-w-[607px]'
             style={{
               backgroundImage: `url(${project.image})`,
-              backgroundSize: "cover",
-              minHeight: "617px",
-              minWidth: "607px",
+              backgroundSize: "cover"
             }}>
             {/* blackish overlay cos I'm writing on it */}
             <div className='bg-blacky bg-opacity-50  min-h-full min-w-full h-full w-full absolute top-0 left-0 rounded-3xl'></div>
@@ -416,10 +415,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className='relative h-full text-white z-10 flex flex-col justify-end gap-8 mb-8'>
-              <h3 className='text-3xl font-font-spring'>{project.name}</h3>
-              <p className='text-lg'>{project.summary}</p>
-              <div className='flex gap-8 mb-8'>
+            <div className='relative h-full text-white z-10 flex flex-col justify-center md:justify-end gap-5 gap-8 mb-8'>
+              <h3 className='text-xl md:text-3xl font-font-spring'>{project.name}</h3>
+              <p className='text-sm md:text-lg'>{project.summary}</p>
+              <div className='flex gap-8 mb-3 md:mb-8'>
                 <a href={project.project_link} className='text-lg inline-block'>
                   <Image
                     src='/img/arrow-up-right.svg'
@@ -442,42 +441,58 @@ export default function Home() {
         ))}
       </div>
 
-      <div className='flex justify-end mx-[5%] mb-16'>
+      <div className='flex justify-end mx-[5%] mb-16 text-xs md:text-base'>
         <Link
           href='/projects'
-          className='flex gap-2 rounded-3xl border border-white  py-2 -my-2'>
+          className='flex gap-1 md:gap-2 rounded-3xl border border-white  py-2 -my-2'>
+          <Image
+            src='/img/right-rounded.svg'
+            width={20}
+            height={20}
+            alt='Picture of the icon'
+            className="block md:hidden"
+          />
           <Image
             src='/img/right-rounded.svg'
             width={35}
             height={35}
             alt='Picture of the icon'
+            className="hidden md:block"
           />
-          <span className='w-full mx-2 py-1'>See More</span>
+          <span className='w-full mx-1 md:mx-2 md:py-1'>See More</span>
         </Link>
       </div>
 
-      <div className='flex justify-start mx-[5%] mb-20'>
+      <div className='flex justify-start mx-[5%] md-8 md:mb-20'>
         <div className='flex gap-1 mb-12'>
           <Image
             src='/img/arrow-down.svg'
             width={35}
             height={35}
             alt='Picture of the icon'
+          className='hidden md:block'
+          />
+          <Image
+            src='/img/arrow-down.svg'
+            width={20}
+            height={20}
+            alt='Picture of the icon'
+className='block md:hidden'
           />
           <Link
             href='/projects'
             className='flex gap-2 rounded-3xl border border-white  py-1'>
-            <span className='w-full px-4'>Contact Me</span>
+            <span className='w-full px-4 text-xs md:text-base'>Contact Me</span>
           </Link>
           <div></div>
         </div>
       </div>
 
-      <div className='flex flex-col mx-[5%] my-12'>
+      <div className='flex flex-col mx-[5%] my-5 md:my-12'>
         <div className='flex justify-center'>
-          <h1 className='text-3xl font-font-spring'>Get in touch</h1>
+          <h1 className='text-2xl md:text-3xl font-font-spring'>Get in touch</h1>
         </div>
-        <p className='my-4 text-center font-font-spring-light text-[#A1A1A1] mx-[15%] text-lg'>
+        <p className='my-4 text-center font-font-spring-light text-[#A1A1A1] md:mx-[15%] text-base md:text-lg'>
           Currently, i am on a lookout for some new opportunities and
           collaborations. if you have a project in mind and you like what you
           have seen so far or you just want to connect, feel free to drop a
@@ -490,7 +505,7 @@ export default function Home() {
           <input
             name='name'
             type='text'
-            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none autofill:border-[#282828] autofill:bg-[#141414]'
+            className='border-[#282828] border-2 px-4 py-6 w-full md:w-2/5 rounded-2xl bg-[#141414] focus:outline-none autofill:border-[#282828] autofill:bg-[#141414]'
             placeholder='Name'
           />
         </div>
@@ -499,7 +514,7 @@ export default function Home() {
           <input
             name='email'
             type='email'
-            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none font-neue-bold'
+            className='border-[#282828] border-2 px-4 py-6 w-full md:w-2/5 rounded-2xl bg-[#141414] focus:outline-none font-neue-bold'
             placeholder='email'
           />
         </div>
@@ -508,14 +523,14 @@ export default function Home() {
           <textarea
             name='message'
             type='text'
-            className='border-[#282828] border-2 px-4 py-6 w-2/5 rounded-2xl bg-[#141414] focus:outline-none'
+            className='border-[#282828] border-2 px-4 py-6 w-full md:w-2/5 rounded-2xl bg-[#141414] focus:outline-none'
             placeholder='Message'
             rows={4}
           />
         </div>
 
         <div className='flex justify-center my-6'>
-          <button className='inline-block bg-[#5DBD8C] rounded-3xl py-6 px-20 text-blacky'>
+          <button className='inline-block bg-[#5DBD8C] rounded-3xl py-3 md:py-6 px-20 text-blacky'>
             SUBMIT
           </button>
         </div>

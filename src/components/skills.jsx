@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -16,13 +17,13 @@ export function Skills() {
       breakpoints: {
         // when window width is >= 320px
         320: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+          slidesPerView: 1,
+          spaceBetween: 10,
         },
         // when window width is >= 480px
         480: {
-          slidesPerView: 3,
-          spaceBetween: 30,
+          slidesPerView: 1,
+          spaceBetween: 10,
         },
         // when window width is >= 640px
         640: {
@@ -76,7 +77,7 @@ export function Skills() {
   };
 
   return (
-    <div className='bg-[#5DBD8C] my-12 rounded-[50px] py-10 pl-10 text-blacky mx-8'>
+    <div className='bg-[#5DBD8C] my-12 rounded-[50px] py-10 pl-10 text-blacky mx-1 md:mx-8'>
       <div className='flex gap-1 mb-12'>
         <Image
           src='/img/arrow-down-black.svg'
@@ -87,18 +88,18 @@ export function Skills() {
         <Link
           href='/projects'
           className='flex gap-2 rounded-3xl border-2 border-blacky  py-1'>
-          <span className='w-full px-2 '>Why Choose Me</span>
+          <span className='w-full px-2 text-xs md:text-base'>Why Choose Me</span>
         </Link>
         <div></div>
       </div>
 
-      <div className='flex justify-between'>
-        <div className=' text-6xl w-2/5 font-font-spring font-thin'>
+      <div className='md:flex justify-between'>
+        <div className='text-2xl text-center md:text-left md:text-6xl md:w-2/5 font-font-spring font-thin'>
           My Extensive List of Skills
         </div>
 
-        <div className='text-lg font-font-spring w-1/4 mr-8 font-thin'>
-          <div className='pb-6 px-4 border-b-[1.5px]'>
+        <div className='text-lg font-font-spring md:w-1/4 mr-8 font-thin'>
+          <div className='hidden md:block pb-6 px-4 border-b-[1.5px]'>
             Building the worlds best web based applications.
           </div>
 
@@ -135,9 +136,9 @@ export function Skills() {
                 onClick={prevSlide}
               />
 
-              <h4 className='text-2xl my-4 text-[#ffffff]'>{x.title}</h4>
+              <h4 className='text-lg md:text-2xl my-4 text-[#ffffff]'>{x.title}</h4>
 
-              <p className='text-[#D9D9D9]'>{x.subText}</p>
+              <p className='text-[#D9D9D9] text-xs md:text-base'>{x.subText}</p>
             </div>
           ))}
         </div>
