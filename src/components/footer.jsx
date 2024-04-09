@@ -16,7 +16,7 @@ export function Footer() {
             />
           </Link>
         </div>
-        <div className='md:w-3/5 text-[#A1A1A1] mb-4'>
+        <div className='md:w-3/5 text-sm md:text-base text-[#A1A1A1] mb-4'>
           Together, we will make your brand stand out and leave a lasting
           impression on your target audience. Join us in this exciting journey
           towards a greater brand recognition and success

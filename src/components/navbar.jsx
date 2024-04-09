@@ -32,12 +32,13 @@ function Navbar() {
             <span className='w-full mx-2 py-1'>View Projects</span>
           </Link>
         </div>
-        <div className='md:hidden'>
+        <div className='md:hidden flex justify-end'>
           <Image
             src='/img/hamburger.svg'
-            width={177}
-            height={35}
+            width={100}
+            height={30}
             alt='Picture of the author'
+            className="w-12"
           />
         </div>
       </nav>
